@@ -1,0 +1,13 @@
+<%- include layouts/header.ejs %>
+        <div class="page-data">
+            <% if (message) { %>
+                <p class="errorMessage" id="errorMessage">
+                    <%= message %>
+                </p>
+            <% } %>
+            <div class="data-btn">
+                <button onClick="addUser();">+ Add Customer</button>
+                <button onClick="viewUser();">View Customer</button>
+            </div>
+        </div>
+<%- include layouts/footer.ejs %>

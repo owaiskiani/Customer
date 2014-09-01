@@ -1,0 +1,31 @@
+<%- include layouts/header.ejs %>
+        <div class="page-data">
+            
+            <% if (message) { %>
+                <p class="errorMessage" id="errorMessage">
+                    <%= message %>
+                </p>
+            <% } %>
+            <form method="post" action="/login" class="loginForm">
+                <table cellpadding="11">
+                    <tr>
+                        <td class="label">Username: </td>
+                        <td><input type="text" name="username" required><span>*</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Password: </td>
+                        <td><input type="password" name="pswd" required><span>*</span></td>
+                     </tr>
+                    <tr>
+                        <td class="label"></td>
+                        <td>
+                            <input type="submit" name="submit" value="Login">
+                        </td>
+                     </tr>
+                </table>
+            </form>
+            <hr>
+            <p>Need an account? <a href="/signup">Signup</a></p>
+        </div>
+        
+<%- include layouts/footer.ejs %>

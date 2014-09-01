@@ -1,0 +1,159 @@
+
+*{
+
+    border-radius:0px;
+}
+a {
+  color: #00B7FF;
+}
+.navbar-header{
+    width: 30%;
+    float: left;
+}
+#site_logo a{
+    width: 100%;
+    float: left;
+}
+#site_logo{
+    width: 30%;
+}
+#wrapper{
+    margin-top:30px;
+    width:90%;
+    margin-left:5%;
+    border:1px solid #ddd;
+    background:#fff;
+    float: left;
+}
+.loginForm .twoButton{
+    margin: 5px 10px;
+    color: black;
+    font-size: 16px;
+    float: left;
+}
+.page-container{
+    padding: 20px;
+    float: left;
+    width: 96%;
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    float: left;
+    width: 100%;
+}
+.page-data{padding:10px;}
+.page-header{
+    padding: 2px;
+    padding-left: 40px;
+    background: #665847;
+    color: #FEFFFD;
+    float: left;
+    width: 1095px;
+}
+.page-header .logo{
+    float: left;
+    width: 30%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.page-header .logo a{
+    text-decoration:  none;
+}
+.errorMessage{
+    padding: 15px 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    float: left;
+    width: 93%;
+}
+.page-container h2{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.page-container h2 a{
+    text-decoration:  none;
+    
+}
+.data-btn{padding-left:8px}
+.data-btn button{
+    padding:10px 20px;
+    background:#FF9900;
+    border:1px solid #3f4549;
+    color:#FEFFFD;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+.data-table{padding-left:10px;}
+.data-table table{border-collapse:collapse;border:1px solid #ddd;width:96%}
+.a-inside{padding:4px 10px;border:1px solid #fff;text-decoration:none;}
+.a-inside.edit{background-color:#00CC00;color:#fff;}
+.a-inside.delete{background-color:#D23641;color:#fff;}
+
+.loginForm table{
+    float: left;
+    width: 100%;
+}
+.loginForm table tr{
+    float: left;
+    width: 100%;
+}
+.loginForm .label {
+    float: left;
+line-height: 30px;
+}
+.loginForm table tr td input {
+    float: left;
+}
+.loginForm span{
+    color: red;
+    font-size: 23px;
+    margin: 6px 0px 0px 10px;
+    float: left;
+    line-height: 28px;
+}
+.logout{
+    float: right;
+    margin-right: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logout a{
+    text-decoration: none;
+}
+input[type="text"],[type="password"]{
+    
+    border:1px solid #ddd;
+    height:30px;
+    width:300px;
+}
+.cancel{
+    background-color:#D23641;
+    color:#fff;
+    border:1px solid #3f4549;
+    color:#fff;
+    padding:8px 35px;
+    font-weight:bold;
+   
+
+}
+input[type="submit"]{
+    cursor: pointer;
+    border:1px solid #3f4549;
+    color:#fff;
+    padding:8px 35px;
+    font-weight:bold;
+    background:#6599FF;
+}
+textarea{ border:1px solid #ddd;width:296px;}
+.label{font-weight:bold;}
+
+#footer{margin-left:82%;margin-top:10%}
