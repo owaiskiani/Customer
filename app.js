@@ -16,9 +16,11 @@ var app = express();
 var connection  = require('express-myconnection'); 
 var mysql = require('mysql');
 
-app.use(express.cookieParser('S3CRE7'));
-app.use(express.session());
-
+app.use(express.cookieParser('testtest'));
+  app.use(express.session({
+    secret: 'testtest',
+    maxAge: 3600000
+  }));
 
 // all environments
 app.set('port', process.env.PORT || 4300);
@@ -74,7 +76,6 @@ app.get('/customers/delete/:id', customers.delete_customer);
 app.get('/customers/edit/:id', customers.edit);
 app.post('/customers/edit/:id',customers.save_edit);
 
-app.use(app.router);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

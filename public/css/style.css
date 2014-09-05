@@ -15,7 +15,24 @@ a {
     float: left;
 }
 #site_logo{
+    width: 100%;
+    
+}
+#site_logo img{
+    float: left;
+}
+form table{
     width: 30%;
+}
+form table tr{
+    padding: 5px 0 !important;
+    float: left;
+    width: 100%;
+}
+#site_logo span{
+    float: left;
+    margin: 15px 0;
+    margin-left: 9px;
 }
 #wrapper{
     margin-top:30px;
@@ -44,14 +61,23 @@ hr{
     float: left;
     width: 100%;
 }
-.page-data{padding:10px;}
+.page-data{
+    padding:10px;
+    float: left;
+    width: 100%;
+}
 .page-header{
     padding: 2px;
     padding-left: 40px;
     background: #665847;
     color: #FEFFFD;
     float: left;
-    width: 1095px;
+    width: 100%;
+}
+.need_account{
+    float: left;
+    width: 100%;
+    
 }
 .page-header .logo{
     float: left;
@@ -107,7 +133,10 @@ hr{
 }
 .loginForm .label {
     float: left;
-line-height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    width: 182px;
+    text-align: left;
 }
 .loginForm table tr td input {
     float: left;
@@ -125,6 +154,7 @@ line-height: 30px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 9px;
 }
 .logout a{
     text-decoration: none;

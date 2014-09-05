@@ -15,9 +15,8 @@ exports.login = function(req, res){
 };
 
 exports.logout = function(req, res){
-    var messages = '';
+    var messages = 'Your Logout.';
     req.session.destroy();
-    req.cookie.destroy();
     res.render('login',{page_title:"Login",message: messages});
     
 };
@@ -36,9 +35,9 @@ exports.signup = function(req, res){
 exports.checklogin = function(req,res){
     var loginInput = JSON.parse(JSON.stringify(req.body));
     req.getConnection(function (err, connection) {
-        var username    = loginInput.username;
+        var uname    = loginInput.username;
         var pswd        = loginInput.pswd;
-        var query = connection.query("SELECT * FROM users WHERE username = ? AND pswd = ? ",[username,pswd], function(err,rows)
+        var query = connection.query("SELECT * FROM users WHERE username = ? AND pswd = ? ",[uname,pswd], function(err,rows)
         {
             if (err){
                 console.log("Error Fetching : %s ",err );
@@ -46,7 +45,7 @@ exports.checklogin = function(req,res){
             }    
             else{
                 if (rows.length > 0) {
-                    req.session.username = username;
+                    req.session.username = uname;
                     res.render('dashboard',{page_title:"Welcome to Customer Center",message: messages});
                 }
                 else{
