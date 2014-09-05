@@ -51,7 +51,7 @@ form table tr{
 .page-container{
     padding: 20px;
     float: left;
-    width: 96%;
+    width: 100%;
 }
 hr{
     margin-top: 20px;
@@ -186,4 +186,27 @@ input[type="submit"]{
 textarea{ border:1px solid #ddd;width:296px;}
 .label{font-weight:bold;}
 
-#footer{margin-left:82%;margin-top:10%}
+#footer{
+    float: left;
+    width: 100%;
+}
+#footer .copyright{
+    padding: 5px;
+}
+.page_footer{
+    padding: 25px 10px;
+    background: #665847;
+    color: #FEFFFD;
+    float: left;
+    width: 100%;
+}
+.footer_right {
+    text-align: right;
+    margin: 0px 0px 0px -34px;
+}
+.footer_left {
+    padding-top: 4px;
+}
+.footer_middle {
+    text-align: center;
+}

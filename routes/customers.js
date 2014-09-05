@@ -4,25 +4,24 @@
  */
 
 exports.login = function(req, res){
-    var username = req.session.username;
-    var messages = username;
+    var messages = '';
     if(req.session.username){
         res.render('dashboard',{page_title:"Dashboard",message: messages});
     }else{
         var messages = '';
-        res.render('login',{page_title:"Login",message: messages});
+        res.render('login',{page_title:"Welcome to Customer Centre",message: messages});
     }
 };
 
 exports.logout = function(req, res){
-    var messages = 'Your Logout.';
+    var messages = '';
     req.session.destroy();
-    res.render('login',{page_title:"Login",message: messages});
+    res.render('login',{page_title:"Welcome to Customer Centre",message: messages});
     
 };
 
 exports.signup = function(req, res){
-    var username = req.session.username;
+    var username = '';
     if(username){
         res.render('dashboard',{page_title:"Dashboard",message: messages});
     }else{
@@ -50,7 +49,7 @@ exports.checklogin = function(req,res){
                 }
                 else{
                     var messages = 'Username/Password is wrong. Try again.';
-                    res.render('login',{page_title:"Login",message: messages});
+                    res.render('login',{page_title:"Welcome to Customer Centre",message: messages});
                 }
             }
         });
@@ -79,12 +78,12 @@ exports.save_user = function(req,res){
 
 
 exports.dashboard = function(req, res){
-    var username = req.session.username;
+    var username = '';
     if(username){
         res.render('dashboard',{page_title:"Dashboard",message: messages});
     }else{
         var messages = '';
-        res.render('login',{page_title:"Login",message: messages});
+        res.render('login',{page_title:"Welcome to Customer Centre",message: messages});
     }
     
 };
@@ -103,7 +102,7 @@ exports.list = function(req, res){
         });
     }else{
         var messages = '';
-        res.render('login',{page_title:"Login",message: messages});
+        res.render('login',{page_title:"Welcome to Customer Centre",message: messages});
     }
 };
 
@@ -115,7 +114,7 @@ exports.add = function(req, res){
         res.render('add_customer',{page_title:"Add Customers"});
     }else{
         var messages = '';
-        res.render('login',{page_title:"Login",message: messages});
+        res.render('login',{page_title:"Welcome to Customer Centre",message: messages});
     }
   
 };
@@ -135,7 +134,7 @@ exports.edit = function(req, res){
         });
     }else{
         var messages = '';
-        res.render('login',{page_title:"Login",message: messages});
+        res.render('login',{page_title:"Welcome to Customer Centre",message: messages});
     }
      
 };
@@ -197,7 +196,7 @@ exports.delete_customer = function(req,res){
                 });
             }
         });
-     });
+    });
 };
 
 
