@@ -1,0 +1,29 @@
+<%- include layouts/header.ejs %>
+    <% if(session.username == ''){ %>
+        <% res.redirect("/login"); %>
+    <% } %>
+        <div class="page-data">
+            <% if (globalMessage) { %>
+                <p class="alert <%= globalMessage.class %>" id="errorMessage">
+                    <%= globalMessage.message %>
+                </p>
+            <% } %>
+            <form method="post" action="/customers/profilepic" enctype="multipart/form-data">
+                <table cellpadding="11">
+                
+                <tr>
+                    <td class="label">Profile Picture</td>
+                    <td> <input type="file" name="profilePic" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="submit" value="Save">
+                        <input type="button" name="cancel" value="Cancel" class="cancel" onClick="profile()">
+                    </td>
+                </tr>
+                </table>
+            </form>
+            
+        </div>
+        
+<%- include layouts/footer.ejs %>

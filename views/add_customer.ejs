@@ -1,5 +1,7 @@
 <%- include layouts/header.ejs %>
-
+    <% if(session.role != 'admin'){ %>
+        <% res.redirect("/dashboard"); %>
+    <% } %>
         <div class="page-data">
             
             <form method="post" action="/customers/add">
@@ -15,17 +17,27 @@
                 <tr>
                     <td class="label">Email</td>
                     <td> <input type="text" name="email" required></td>
-                 </tr>
-                  <tr>
+                </tr>
+                <tr>
                     <td class="label">Phone</td>
                     <td> <input type="text" name="phone" required></td>
-                 </tr>
-                 <tr>
+                </tr>
+                <tr>
+                    <td class="label">User Role</td>
+                    <td>
+                        <select name="user_role" required>
+                            <option value="">Select Role</option>
+                            <option value="1">Admin</option>
+                            <option value="2">Normal User</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <td colspan="2">
                         <input type="submit" name="submit" value="Save">
-                       <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+                       <input type="button" name="cancel" value="Cancel" class="cancel" onClick="customerList()">
                     </td>
-                 </tr>
+                </tr>
                 </table>
             </form>
             

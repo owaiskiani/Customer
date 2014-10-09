@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 </html>
     <head>
-        <title>Contoh CRUD Node.js-MySQL</title>
+        <title>Customer Center</title>
         <link href="/../css/bootstrap.css" rel="stylesheet">
         <link href="/../css/style.css" rel="stylesheet">
         <link href="/../css/social_icons.css" rel="stylesheet">
         
         <script type="text/javascript" src="/../js/jquery.js"></script>
         <script type="text/javascript" src="/../js/bootstrap.js"></script>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src ="/../js/imgLiquid.js" type="text/javascript"></script>
         <script type="text/javascript" src="/../js/all.js"></script>
     </head>
     <body>
@@ -22,13 +24,30 @@
                             </a>
                         </div>
                     </div>
-                    <div class="logout">
-                        <a href="/logout">Logout</a>
-                    </div>
+                    <% if(session.username){ %>
+                        <div class="logout">
+                            <a href="/logout">Logout</a>
+                        </div>
+                     <%  }%>
+                    
                 </div>
             </div>
         </div>
     </header>
         <div id="wrapper">
-            <div class="page-header"><h2><%=page_title%></h2></div>
+            <div class="page-header">
+                <div class="data-btn">
+                    <ul id="menu-main" class="nav navbar-nav navbar-right single-page-nav top_nav">
+                        <li><a href="/">Home</a></li>
+                        <% if(session.username){ %>
+                            <% if(session.role == 'admin'){ %>
+                                <li><a href="/customers/view">View Customer</a></li>
+                            <% } %>
+                            <li class="profile "><a href="/customers/profile">My Profile</a></li>
+                            <li class="profile "><a href="/customers/chat">Chat</a></li>
+                            
+                        <% }  %>
+                    </ul>
+                </div>
+            </div>
             <div class="page-container">

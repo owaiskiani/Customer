@@ -10,6 +10,19 @@ a {
     width: 30%;
     float: left;
 }
+.navbar-nav > li > a{
+    color : #fff;
+}
+.active{
+    background-color: #ddd;
+    color: #00B7FF;
+}
+.navbar-nav .active a{
+    color: #00B7FF;
+}
+.navbar-nav > li > a:hover{
+    color : #00B7FF;
+}
 #site_logo a{
     width: 100%;
     float: left;
@@ -49,7 +62,7 @@ form table tr{
     float: left;
 }
 .page-container{
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     float: left;
     width: 100%;
 }
@@ -62,9 +75,18 @@ hr{
     width: 100%;
 }
 .page-data{
-    padding:10px;
+    padding:20px 10px 10px 10px;
     float: left;
     width: 100%;
+}
+.page-container .page-title{
+    text-align: left;
+    width: 45%;
+}
+.page-container .add-button{
+    text-align: right;
+    float: right;
+    margin: 14px 44px 0px 0px;
 }
 .page-header{
     padding: 2px;
@@ -98,6 +120,15 @@ hr{
     float: left;
     width: 93%;
 }
+.successMessage{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 .page-container h2{
     float: left;
     width: 100%;
@@ -116,7 +147,6 @@ hr{
     font-weight:bold;
     cursor: pointer;
 }
-
 .data-table{padding-left:10px;}
 .data-table table{border-collapse:collapse;border:1px solid #ddd;width:96%}
 .a-inside{padding:4px 10px;border:1px solid #fff;text-decoration:none;}
@@ -159,7 +189,7 @@ hr{
 .logout a{
     text-decoration: none;
 }
-input[type="text"],[type="password"]{
+input[type="text"],[type="password"],select{
     
     border:1px solid #ddd;
     height:30px;
@@ -210,3 +240,224 @@ textarea{ border:1px solid #ddd;width:296px;}
 .footer_middle {
     text-align: center;
 }
+.imgLiquid img{
+    visibility:hidden;
+}
+.profilePicture{
+    width: 276px;
+    height: 245px;
+    padding: 8px;
+    overflow: hidden;
+}
+.profilePictureArea{
+    width: 100%;
+    height: 245px;
+    overflow: hidden;
+}
+.profilePictureArea a{
+    position: absolute;
+    background-color: #fff;
+    margin: -20px 0px 0px 0px;
+}
+.userProfile{
+    float:left;
+    width:100%;
+    margin-top: 17px;
+}
+.userProfile .personalData{
+    list-style: none;
+    line-height: 25px;
+    margin: 0;
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid #eee;
+}
+.userProfile .personalData li{
+    font-size: 17px;
+}
+.userProfile .personalData li strong{
+    width: 12%;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+.socialMedia h3{
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.privateMessage h3{
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.privateMessage textArea{
+    width: 97%;
+    height: 119px;
+    border-radius: 7px;
+    padding: 6px 8px;
+    margin-bottom: 7px;
+}
+.socialMediaData{
+    list-style: none;
+    line-height: 25px;
+    margin: 0;
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid #eee;
+}
+.socialMediaData li a{
+    line-height: 20px;
+}
+.socialMediaData li a i{
+    font-size: 25px;
+    height: 36px;
+}
+.chatLeftWraper .row, .chatRightWraper .row {
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 5px 9px;
+}
+.chatRightWraper .row h3, .chatLeftWraper .row h3{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.chatUserName{
+    text-transform: capitalize;
+    width: 100%;
+    padding: 3px 0px;
+    font-size: 15px;
+}
+.chatUserName a{
+    width: inherit;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'TitilliumRegular';
+    margin: 0 0 15px 0;
+    line-height: 22px;
+    background: url(/../images/online.png) no-repeat left 3px;
+    padding-left: 25px;
+}
+.chatMessageArea{
+    margin: 0px 0 11px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    height: 300px;
+    padding: 10px 13px;
+    overflow-y: auto;
+}
+.chatMessageArea ul{
+    margin: 1px;
+    width: 100%;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+.chatMessageArea ul li{
+    margin: 1px;
+    line-height: 21px;
+}
+.chatMessageArea ul li strong{
+    margin: 0px 9px 0 0;
+}
+.chatMessageForm input[type="text"] {
+    width: 60%;
+    height: 38px;
+    padding: 0px 12px;
+}
+.submit {
+    cursor: pointer;
+    border: 1px solid #3f4549;
+    color: #fff;
+    padding: 8px 35px;
+    font-weight: bold;
+    background: #6599FF;
+}
+.chatMessageForm a {
+    cursor: pointer;
+    border: 1px solid #3f4549;
+    color: #fff;
+    padding: 10px 35px;
+    font-weight: bold;
+    background: #00CC00;
+}
+.privateMessageArea{
+    border: 1px solid #eee;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-top: 17px;
+    width: 100%;
+    max-height: 560px;
+}
+.privateMessageArea .row{
+    margin: 0;
+}
+.privateMessageArea .messageSenderName, .privateMessageArea .privateMessages{
+    border: 1px solid #eee;
+    overflow: hidden;
+    max-height: 546px;
+    padding: 0;
+}
+
+.privateUserMessage{
+    padding: 2px 0;
+    width: 100%;
+    max-height: 560px;
+    overflow-y: auto;
+}
+.privateUserMessage .right{
+    text-align: right;
+    padding: 2px 7px;
+    border-bottom: 1px solid #eee;
+}
+.privateUserMessage .left{
+    text-align: left;
+    padding: 2px 7px;
+    border-bottom: 1px solid #eee;
+}
+.privateSingleMessage{
+    margin: 1px;
+}
+.messageSenderName .username{
+    width: 100%;
+    float: left;
+    padding: 0px 9px;
+    border-bottom: 1px solid #eee;
+    height: 34px;
+    line-height: 33px;
+}
+.messageSenderName .username:hover{
+    background-color: #ddd;
+    width: 100%;
+    float: left;
+    padding: 0px 9px;
+    border-bottom: 1px solid #eee;
+    height: 34px;
+    line-height: 33px;
+    cursor: pointer;
+}
+.messageSenderName .a{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    line-height: 33px;
+    float: left;
+    margin-left: 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.left .messageTime{
+    font-size: 13px;
+    float: right;
+    color: #bfbfbf;
+    display: inline-block;
+    vertical-align: middle;
+}
+.right .messageTime{
+    font-size: 13px;
+    float: left;
+    color: #bfbfbf;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
