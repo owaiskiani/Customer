@@ -270,9 +270,13 @@ textarea{ border:1px solid #ddd;width:296px;}
     margin: 0;
     padding: 0 0 15px 0;
     border-bottom: 2px solid #eee;
+    float: left;
+    width: 100%;
 }
 .userProfile .personalData li{
     font-size: 17px;
+    float: left;
+    width: 100%;
 }
 .userProfile .personalData li strong{
     width: 12%;
@@ -280,9 +284,17 @@ textarea{ border:1px solid #ddd;width:296px;}
     font-size: 15px;
     font-weight: bold;
 }
+.socialMedia{
+    float: left;
+    width: 100%;
+}
 .socialMedia h3{
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+}
+.privateMessage{
+    width: 100%;
+    float: left;
 }
 .privateMessage h3{
     border-bottom: 2px solid #eee;
@@ -325,7 +337,7 @@ textarea{ border:1px solid #ddd;width:296px;}
     padding: 3px 0px;
     font-size: 15px;
 }
-.chatUserName a{
+.chatUserName a,.chat_me{
     width: inherit;
     text-decoration: none;
     font-size: 17px;

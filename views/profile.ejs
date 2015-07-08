@@ -44,25 +44,37 @@
                         <div class="userProfile" >
                             <ul class="personalData">
                                 <li><strong>Username: </strong> <%=session.username%></li>
-                                <li><strong>Email: </strong> <%=data[0].email%></li>
-                                <li><strong>Phone: </strong> <%=data[0].phone%></li>
-                                <li><strong>Address: </strong> <%=data[0].address%></li>
-                                <li><strong>About Me: </strong> <%=data[0].aboutme%></li>
+                                <% if( data[0].email ){ %>
+                                    <li><strong>Email: </strong> <%=data[0].email%></li>
+                                <% } %>
+                                <% if( data[0].phone ){ %>
+                                    <li><strong>Phone: </strong> <%=data[0].phone%></li>
+                                <% } %>
+                                <% if( data[0].address ){ %>
+                                    <li><strong>Address: </strong> <%=data[0].address%></li>
+                                <% } %>
+                                <% if( data[0].aboutme ){ %>
+                                    <li><strong>About Me: </strong> <%=data[0].aboutme%></li>
+                                <% } %>
                             </ul>
-                            <div class="socialMedia">
-                                <h3>Social Profile</h3>
-                                <ul class="socialMediaData">
-                                    <% if( data[0].fbLink ) { %>
-                                        <li><a target="_blank" href="<%=data[0].fbLink%>"><i class="fa fa-facebook-square"></i> Facebook</a></li>
-                                    <% } %>
-                                    <% if( data[0].twLink ) { %>
-                                        <li><a target="_blank" href="<%=data[0].twLink%>"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-                                    <% } %>
-                                    <% if( data[0].liLink ) { %>
-                                        <li><a target="_blank" href="<%=data[0].liLink%>"><i class="fa fa-linkedin-square"></i> Linkedin</a></li>
-                                    <% } %>
-                                </ul>
-                            </div>
+                            
+                            <% if( data[0].fbLink || data[0].twLink || data[0].liLink) { %>
+                                <div class="socialMedia">
+                                    <h3>Social Profile</h3>
+                                    <ul class="socialMediaData">
+                                        <% if( data[0].fbLink ) { %>
+                                            <li><a target="_blank" href="<%=data[0].fbLink%>"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                                        <% } %>
+                                        <% if( data[0].twLink ) { %>
+                                            <li><a target="_blank" href="<%=data[0].twLink%>"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+                                        <% } %>
+                                        <% if( data[0].liLink ) { %>
+                                            <li><a target="_blank" href="<%=data[0].liLink%>"><i class="fa fa-linkedin-square"></i> Linkedin</a></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            <% } %>
+
                         </div>
                     </div>
                 <% }else{ %>
